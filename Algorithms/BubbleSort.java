@@ -1,4 +1,6 @@
+// Packages
 package Algorithms;
+
 // Imports
 import java.util.Collections;
 import java.util.List;
@@ -10,19 +12,18 @@ This algortihm is ideal for large data sets due to the time complexity of averag
 */
 public class BubbleSort {
   
-  
   /** 
-   * Sorts array in ascending order by swapping an element if its bigger than the ascending neighboor.
+   * Sorts an array in ascending order by swapping an element if its bigger than the ascending neighbor.
    * 
-   * @param array the unsorted array.
+   * @param array The unsorted array.
    */  
   public static void sort(List<Integer> array) {
-    // length of array
+    // length of the array
     int n = array.size();
     
     // swap until nothing can be swapped
     while (n > 0) {
-      // swap until bigger element has no smaller ascending neighboors
+      // swap until bigger element has no smaller ascending neighbors
       for (int i = 1; i <= n - 1; i++){
         // check if last element is bigger than current element
         if (array.get(i-1) > array.get(i)) {
@@ -30,6 +31,7 @@ public class BubbleSort {
           Collections.swap(array, i, i-1);
         }
       }
+      // Decrement length by one.
       n = n - 1;
     }
   }
